@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EVA2_14_VEHICULOS">
+  <ClassDiagramComponents>
+    <Class name="Automovil" package="com.mycompany.eva2_14_vehiculos" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="puertas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="puertas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="puertas"/>
+          <Argument type="int" name="velocidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPuertas" returnType="int" visibility="public"/>
+        <Method name="setPuertas" returnType="void" visibility="public">
+          <Argument type="int" name="puertas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EVA2_14_VEHICULOS" package="com.mycompany.eva2_14_vehiculos" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="acelerar" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Vehiculos" name="Vehiculos"/>
+          <Argument type="int" name="ajuste"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Motocicleta" package="com.mycompany.eva2_14_vehiculos" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="capacidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="capacidad"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="capacidad"/>
+          <Argument type="int" name="velocidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCapacidad" returnType="int" visibility="public"/>
+        <Method name="setCapacidad" returnType="void" visibility="public">
+          <Argument type="int" name="capacidad"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vehiculos" package="com.mycompany.eva2_14_vehiculos" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="velocidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="velocidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVelocidad" returnType="int" visibility="public"/>
+        <Method name="setVelocidad" returnType="void" visibility="public">
+          <Argument type="int" name="velocidad"/>
+        </Method>
+        <Method name="acelerar" returnType="void" visibility="public">
+          <Argument type="int" name="ajuste"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.mycompany.eva2_14_vehiculos.EVA2_14_VEHICULOS" target="com.mycompany.eva2_14_vehiculos.Vehiculos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.mycompany.eva2_14_vehiculos.Automovil" target="com.mycompany.eva2_14_vehiculos.Vehiculos"/>
+    <IsRelation name="is" source="com.mycompany.eva2_14_vehiculos.Motocicleta" target="com.mycompany.eva2_14_vehiculos.Vehiculos"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
